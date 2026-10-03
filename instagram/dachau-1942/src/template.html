@@ -24,6 +24,10 @@
 }
 body { margin: 0; background: #333; }
 .slide { width: 1080px; height: 1350px; position: relative; overflow: hidden; background: var(--bg); margin: 0 0 40px; }
+.frame { position: absolute; left: 0; top: 0; width: 1080px; height: 1350px; }
+/* Instagram Story, 9:16: same layout, centred inside the safe zone. */
+body.story .slide { height: 1920px; }
+body.story .frame { top: 285px; }
 .bg { position: absolute; inset: 0; }
 .veil { position: absolute; inset: 0; background: radial-gradient(120% 80% at 50% 45%, rgba(12,12,13,.35), rgba(12,12,13,0) 70%); }
 .content { position: absolute; left: 100px; right: 100px; top: 110px; bottom: 130px; }
@@ -77,6 +81,7 @@ h2 { margin: 0 0 10px; font: italic 500 42px/1.2 Vollkorn; color: var(--ink); te
 <script src="src/stelae.js"></script>
 <script>
 (async function () {
+  if (location.hash === '#story') document.body.classList.add('story');
   await document.fonts.ready;
   for (const c of document.querySelectorAll('.fit')) {
     const inner = c.querySelector('.inner');
@@ -97,6 +102,7 @@ h2 { margin: 0 0 10px; font: italic 500 42px/1.2 Vollkorn; color: var(--ink); te
     while (inner.offsetHeight > c.clientHeight && e > 19) { e -= 0.5; set(); }
     c.dataset.fs = e;
   }
+  for (const cv of document.querySelectorAll('canvas.bg')) cv.height = cv.parentElement.clientHeight;
   for (const cv of document.querySelectorAll('canvas.bg')) drawStelae(cv, JSON.parse(cv.dataset.opts));
   document.body.dataset.ready = '1';
 })();

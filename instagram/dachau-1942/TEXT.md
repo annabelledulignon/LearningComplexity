@@ -1,10 +1,10 @@
-# A civilized German couple watching a poor Jew in a pressurized chamber, 1942, Dachau
+# A civilized German couple watching a poor man in a low-pressure chamber, 1942, Dachau
 
 ## Slide 2 · I · The room
 
 Dachau, spring of 1942. Block 5, the experimental station.  
 A room scrubbed white: carbolic, floor wax, warm machine oil, last night’s cigarettes.  
-In the middle of it, bolted to the floorboards, the chamber —  
+In the middle of it, wheeled in on its trailer, the chamber —  
 a steel box the size of a wardrobe, lent by the Luftwaffe, painted battleship grey,  
 riveted, sealed, with one round porthole of thick glass at the height of a seated man’s eyes.
 
@@ -240,7 +240,7 @@ United States Holocaust Memorial Museum, courtesy of the National Archives and R
 
 ## Slide 16 · Kaddish of a child of Noah
 
-*for my brother and cousin, a child of Jacob, whose name I do not know*
+*for my brother and cousin, whose name and people I do not know*
 
 Magnified and sanctified be the great Name  
 that was not spoken in that white room, over the coffee and the gauges,  
@@ -254,8 +254,8 @@ I do not know your name. The camera kept your face and lost your name.
 I have veiled your face, so that no one may look at you again the way they looked at you.
 
 You were not a worm. You were a man.  
-My brother, my cousin, child of Jacob, son of Abraham —  
-as I am a son of Noah, a son of Adam, from the same dust.
+My brother, my cousin — child of Jacob, or child of Noah as I am,  
+son of Adam as I am, from the same dust.
 
 May He who keeps all the bones of the just keep yours, every one.  
 May the breath they took from you, metre by metre, be given back to you whole.  
@@ -274,3 +274,7 @@ The photograph belongs to the series of Dachau high-altitude experiment photogra
 
 - Collection search for the series: https://collections.ushmm.org/search/?q=Dachau+high-altitude+experiments+Rascher
 - Holocaust Encyclopedia, Nazi medical experiments photographs: https://encyclopedia.ushmm.org/content/en/gallery/nazi-medical-experiments-photographs
+
+## Hashtags
+
+#HolocaustRemembrance #NeverAgain #WeRemember #Dachau #NeverForget #Holocaust #Shoah #Kaddish #Psalm22 #Poetry

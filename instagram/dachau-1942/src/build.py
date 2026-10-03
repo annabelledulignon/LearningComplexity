@@ -117,8 +117,8 @@ for n, (kind, body, stelae) in enumerate(slides, 1):
         opts = {"walk": n * 5.7, "yaw": 0.36 + 0.03 * (n % 4), "alpha": 0.42}
         opts.update(stelae or {})
         canvas = f"<canvas class=\"bg\" width=\"1080\" height=\"1350\" data-opts='{json.dumps(opts)}'></canvas><div class=\"veil\"></div>"
-    parts.append(f'<section class="slide {kind}" id="s{n:02d}">{canvas}{body}'
-                 f'<div class="counter">{n} / {total}</div></section>')
+    parts.append(f'<section class="slide {kind}" id="s{n:02d}">{canvas}<div class="frame">{body}'
+                 f'<div class="counter">{n} / {total}</div></div></section>')
 
 page = (SRC / "template.html").read_text(encoding="utf-8").replace("<!--SLIDES-->", "\n".join(parts))
 (ROOT / "slides.html").write_text(page, encoding="utf-8")
