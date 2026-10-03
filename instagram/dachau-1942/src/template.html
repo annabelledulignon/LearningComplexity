@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dachau 1942 slides</title>
+<style>
+@font-face { font-family: Vollkorn; src: url(fonts/Vollkorn-400.ttf); font-weight: 400; font-style: normal; }
+@font-face { font-family: Vollkorn; src: url(fonts/Vollkorn-500.ttf); font-weight: 500; font-style: normal; }
+@font-face { font-family: Vollkorn; src: url(fonts/Vollkorn-600.ttf); font-weight: 600; font-style: normal; }
+@font-face { font-family: Vollkorn; src: url(fonts/Vollkorn-400i.ttf); font-weight: 400; font-style: italic; }
+@font-face { font-family: Vollkorn; src: url(fonts/Vollkorn-500i.ttf); font-weight: 500; font-style: italic; }
+@font-face { font-family: 'Noto Serif Hebrew'; src: url(fonts/NotoSerifHebrew-400.ttf); font-weight: 400; }
+@font-face { font-family: 'Noto Serif Hebrew'; src: url(fonts/NotoSerifHebrew-500.ttf); font-weight: 500; }
+
+:root {
+  --bg: #0c0c0d;
+  --ink: #ebe6dc;
+  --muted: #a39d92;
+  --faint: #77716a;
+  --ikb: #002fa7;
+  --gold: #dcab55;
+  --gold-line: rgba(220, 171, 85, .3);
+  --blood: #e3222c;
+}
+body { margin: 0; background: #333; }
+.slide { width: 1080px; height: 1350px; position: relative; overflow: hidden; background: var(--bg); margin: 0 0 40px; }
+.frame { position: absolute; left: 0; top: 0; width: 1080px; height: 1350px; }
+/* Instagram Story, 9:16: same layout, centred inside the safe zone. */
+body.story .slide { height: 1920px; }
+body.story .frame { top: 285px; }
+.bg { position: absolute; inset: 0; }
+.veil { position: absolute; inset: 0; background: radial-gradient(120% 80% at 50% 45%, rgba(12,12,13,.35), rgba(12,12,13,0) 70%); }
+.content { position: absolute; left: 100px; right: 100px; top: 110px; bottom: 130px; }
+.fit, .psfit { display: flex; flex-direction: column; justify-content: center; }
+.counter { position: absolute; left: 100px; bottom: 60px; font: 400 17px Vollkorn; letter-spacing: .12em; color: var(--faint); }
+.halo { text-shadow: 0 0 14px var(--bg), 0 0 4px var(--bg); }
+
+/* Title */
+.title-wrap { top: 150px; }
+h1 { margin: 0; font: 500 68px/1.13 Vollkorn; color: var(--ink); text-wrap: balance; text-shadow: 0 0 18px var(--bg), 0 0 6px var(--bg); }
+
+/* Poem */
+.label { font: 500 18px/1 Vollkorn; letter-spacing: .24em; text-transform: uppercase; color: var(--muted); margin-bottom: 34px; text-shadow: 0 0 10px var(--bg); }
+.poem { font-family: Vollkorn; font-size: var(--fs, 30px); line-height: 1.46; color: var(--ink); text-shadow: 0 0 14px var(--bg), 0 0 4px var(--bg); }
+.poem p { margin: 0; padding-left: 1.2em; text-indent: -1.2em; text-wrap: pretty; }
+.stanza + .stanza { margin-top: .74em; }
+
+/* Psalm 22 */
+.psalm { background: var(--ikb); }
+.psalm .content { left: 72px; right: 72px; top: 78px; bottom: 112px; }
+.psalm .counter { left: 72px; color: rgba(220, 171, 85, .65); }
+.ps-head { display: flex; justify-content: space-between; align-items: baseline; color: var(--gold); font: 500 19px Vollkorn; letter-spacing: .26em; text-transform: uppercase; border-bottom: 1px solid var(--gold-line); padding-bottom: 14px; margin-bottom: 24px; }
+.he-head { font: 500 27px 'Noto Serif Hebrew'; letter-spacing: 0; }
+.ps-rows { position: relative; display: grid; grid-template-columns: 1fr 296px; column-gap: 44px; row-gap: var(--rg, 13px); }
+.ps-rows::before { content: ''; position: absolute; top: 4px; bottom: 4px; right: 318px; width: 1px; background: var(--gold-line); }
+.en { font: 500 var(--efs, 25px)/1.38 Vollkorn; color: var(--gold); }
+.en.sup { font-style: italic; font-weight: 400; font-size: calc(var(--efs, 25px) * .86); opacity: .85; }
+.he { font: 400 var(--hfs, 19px)/1.9 'Noto Serif Hebrew'; color: var(--gold); text-align: right; text-wrap: balance; }
+.worm { color: var(--blood); font-weight: 600; }
+.he .worm { font-weight: 500; }
+.ps-foot { margin-top: 26px; padding-top: 14px; border-top: 1px solid var(--gold-line); font: italic 400 16px/1.4 Vollkorn; color: var(--gold); opacity: .8; }
+
+/* Photograph */
+.photo-wrap { left: 80px; right: 80px; top: 72px; bottom: 104px; display: flex; flex-direction: column; }
+.photo-top { display: flex; gap: 40px; align-items: flex-end; }
+.photo-top img { height: 610px; width: auto; display: block; box-shadow: 0 12px 48px rgba(0,0,0,.7); }
+.photo-cap { flex: 1; padding-bottom: 4px; }
+.cap { font: 400 22px/1.5 Vollkorn; color: var(--ink); margin: 0 0 20px; }
+.credit { font: 400 16px/1.5 Vollkorn; color: var(--muted); margin: 0; }
+.blessing { font: italic 400 34px/1.3 Vollkorn; color: var(--ink); text-align: center; margin: 44px 0 24px; text-shadow: 0 0 14px var(--bg); }
+.kaddish { font: 400 23px/1.74 'Noto Serif Hebrew'; color: var(--ink); text-align: center; text-shadow: 0 0 12px var(--bg); }
+
+/* Kaddish of a child of Noah */
+h2 { margin: 0 0 10px; font: italic 500 42px/1.2 Vollkorn; color: var(--ink); text-shadow: 0 0 14px var(--bg); }
+.sub { margin: 0 0 34px; font: italic 400 22px/1.4 Vollkorn; color: var(--muted); text-shadow: 0 0 10px var(--bg); }
+.noahide-he { margin-top: 32px; font: 400 22px/1.8 'Noto Serif Hebrew'; color: var(--muted); text-align: right; text-shadow: 0 0 10px var(--bg); }
+</style>
+</head>
+<body>
+<!--SLIDES-->
+<script src="src/stelae.js"></script>
+<script>
+(async function () {
+  if (location.hash === '#story') document.body.classList.add('story');
+  await document.fonts.ready;
+  for (const c of document.querySelectorAll('.fit')) {
+    const inner = c.querySelector('.inner');
+    let fs = 31;
+    c.style.setProperty('--fs', fs + 'px');
+    while (inner.offsetHeight > c.clientHeight && fs > 24) { fs -= 0.5; c.style.setProperty('--fs', fs + 'px'); }
+    c.dataset.fs = fs;
+  }
+  for (const c of document.querySelectorAll('.psfit')) {
+    const inner = c.querySelector('.inner');
+    let e = 26;
+    const set = () => {
+      c.style.setProperty('--efs', e + 'px');
+      c.style.setProperty('--hfs', (e * 0.76) + 'px');
+      c.style.setProperty('--rg', (e * 0.5) + 'px');
+    };
+    set();
+    while (inner.offsetHeight > c.clientHeight && e > 19) { e -= 0.5; set(); }
+    c.dataset.fs = e;
+  }
+  for (const cv of document.querySelectorAll('canvas.bg')) cv.height = cv.parentElement.clientHeight;
+  for (const cv of document.querySelectorAll('canvas.bg')) drawStelae(cv, JSON.parse(cv.dataset.opts));
+  document.body.dataset.ready = '1';
+})();
+</script>
+</body>
+</html>
